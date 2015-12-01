@@ -9,8 +9,9 @@ gem 'lotus-model', '~> 0.5'
 gem 'pg'
 
 group :test do
-  gem 'test-unit'
+  gem 'byebug'
   gem 'capybara'
+  gem 'test-unit'
 end
 
 group :production do
