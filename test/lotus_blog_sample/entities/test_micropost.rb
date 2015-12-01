@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class TestMicropost < Test::Unit::TestCase
+  cleanup do
+    UserRepository.clear
+  end
+
   test 'can be initialised with attributes' do
     user = UserRepository.create(User.new(email: 'user@example.com', name: '山田太郎'))
 
