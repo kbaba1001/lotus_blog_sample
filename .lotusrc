@@ -1,3 +1,3 @@
 architecture=container
 test=test-unit
-template=erb
+template=haml
