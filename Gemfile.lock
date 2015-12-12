@@ -52,6 +52,7 @@ GEM
       mini_portile (~> 0.6.0)
     pg (0.18.4)
     power_assert (0.2.6)
+    puma (2.15.3)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -78,6 +79,7 @@ DEPENDENCIES
   lotus-model (~> 0.5)
   lotusrb (= 0.5.0)
   pg
+  puma
   rake
   test-unit
 

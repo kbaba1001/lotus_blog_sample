@@ -7,6 +7,7 @@ gem 'lotusrb',     '0.5.0'
 gem 'lotus-model', '~> 0.5'
 
 gem 'pg'
+gem 'puma'
 
 group :test do
   gem 'byebug'
@@ -15,5 +16,4 @@ group :test do
 end
 
 group :production do
-  # gem 'puma'
 end
