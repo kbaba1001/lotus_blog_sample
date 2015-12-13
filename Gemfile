@@ -11,6 +11,7 @@ gem 'puma'
 
 gem 'bcrypt'
 gem 'haml'
+gem 'warden'
 
 group :test do
   gem 'byebug'
