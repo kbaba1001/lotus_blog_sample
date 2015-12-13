@@ -3,6 +3,7 @@
 
 get '/', to: 'users#login_form'
 
+get 'dashboard', to: 'dashboard#index'
 resources :users, only: %i() do
   collection do
     post 'login'
