@@ -3,11 +3,10 @@ require 'features_helper'
 # TODO feature test が動くようにする
 class TestLogin < Test::Unit::TestCase
   test 'can login user' do
-    user = UserRepository.create(User.new(
+    user = UserFactory.create(
       email: 'user@example.com',
       password: 'password',
-      name: '山田太郎'
-    ))
+    )
 
     visit '/'
 

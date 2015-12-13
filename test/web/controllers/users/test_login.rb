@@ -7,11 +7,10 @@ class Web::Controllers::Users::TestLogin < Test::Unit::TestCase
   end
 
   test 'can login' do
-    user = UserRepository.create(User.new(
+    user = UserFactory.create(
       email: 'user@example.com',
-      password: 'password',
-      name: '山田太郎'
-    ))
+      password: 'password'
+    )
 
     action = Web::Controllers::Users::Login.new
     params = {user: {email: 'user1@example.com', password: 'password'}}
