@@ -5,6 +5,7 @@ collection :users do
   attribute :id,   Integer
   attribute :email, String
   attribute :name, String
+  attribute :password_digest, String
 end
 
 collection :microposts do
