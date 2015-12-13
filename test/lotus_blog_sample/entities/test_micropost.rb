@@ -6,7 +6,7 @@ class TestMicropost < Test::Unit::TestCase
   end
 
   test 'can be initialised with attributes' do
-    user = UserRepository.create(User.new(email: 'user@example.com', name: '山田太郎'))
+    user = UserRepository.create(User.new(email: 'user@example.com', name: '山田太郎', password: 'password'))
 
     micropost = Micropost.new(content: 'Tweet', user_id: user.id)
 

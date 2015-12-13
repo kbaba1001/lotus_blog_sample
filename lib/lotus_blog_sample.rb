@@ -2,6 +2,8 @@ require 'lotus/model'
 require 'lotus/mailer'
 Dir["#{ __dir__ }/lotus_blog_sample/**/*.rb"].each { |file| require_relative file }
 
+require_relative 'auth_logic'
+
 Lotus::Model.configure do
   ##
   # Database adapter
