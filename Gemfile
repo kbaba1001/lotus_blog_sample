@@ -14,9 +14,12 @@ gem 'haml'
 gem 'warden'
 
 group :test do
-  gem 'byebug'
   gem 'capybara'
   gem 'test-unit'
+end
+
+group :test, :development do
+  gem 'byebug'
 end
 
 group :production do
