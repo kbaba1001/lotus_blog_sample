@@ -1,3 +1,9 @@
 %h1 Login
 
+- unless params.valid?
+  .errors
+    %ul
+      - params.errors.each do |error|
+        %li= error.attribute_name
+
 = form

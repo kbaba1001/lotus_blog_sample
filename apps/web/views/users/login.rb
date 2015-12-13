@@ -1,6 +1,8 @@
 module Web::Views::Users
-  class LoginForm
+  class Login
     include Web::View
+
+    template 'users/login_form'
 
     def form
       form_for :user, routes.login_users_path do

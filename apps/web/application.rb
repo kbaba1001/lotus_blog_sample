@@ -1,4 +1,5 @@
 require 'lotus/helpers'
+require 'warden'
 
 module Web
   class Application < Lotus::Application
@@ -76,8 +77,18 @@ module Web
       # sessions :cookie, secret: ENV['WEB_SESSIONS_SECRET']
 
       # Configure Rack middleware for this application
-      #
-      # middleware.use Rack::Protection
+      middleware.use(Warden::Manager) do |manager|
+        manager.failure_app = Web::Controllers::Users::AuthFailure
+        manager.default_scope = :user
+
+        manager.serialize_into_session(:user) do |record|
+          record.id
+        end
+
+        manager.serialize_from_session(:user) do |id|
+          UserRepository.find(id)
+        end
+      end
 
       # Default format for the requests that don't specify an HTTP_ACCEPT header
       # Argument: A symbol representation of a mime type, default to :html
