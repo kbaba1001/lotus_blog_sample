@@ -9,6 +9,7 @@ gem 'lotus-model', '~> 0.5'
 gem 'pg'
 gem 'puma'
 
+gem 'bcrypt'
 gem 'haml'
 
 group :test do
